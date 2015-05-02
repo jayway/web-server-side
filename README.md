@@ -7,7 +7,8 @@ Kanban API.
 
 ```bash
 npm install
-bin/www```
+bin/www
+```
 
 Use another API by setting the `API_BASE_URL` environment variable.
 
