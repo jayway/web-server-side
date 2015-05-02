@@ -9,6 +9,7 @@ body {
   padding: 1em;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
+  line-height: 1.7;
   color: #444;
 }
 
@@ -69,9 +70,14 @@ a {
 }
 
 .item .title {
-  display: block;
+  font-size: 125%;
   font-weight: 400;
-  margin-bottom: .5em;
+  margin: 0 0 .25em;
+}
+
+.item .description {
+  font-weight: 200;
+  margin: 0 0 .5em;
 }
 
 .item .actions {

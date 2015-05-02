@@ -6,7 +6,8 @@ mixin column(name, items)
     ul.items
       each item in items
         li.item
-          span.title= item.title
+          h3.title= item.title
+          p.description= item.description
           .actions
             if item.back
               +move-form('back', item.id, item.back)
