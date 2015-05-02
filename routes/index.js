@@ -61,6 +61,7 @@ router.post('/items/:status', function (req, res) {
       title: 'Bad Request',
       description: 'The status of the item cannot be set to "' + target + '"'
     });
+    return;
   }
 
   var id = req.body.id;
@@ -71,18 +72,17 @@ router.post('/items/:status', function (req, res) {
       title: 'Bad Request',
       description: 'The "id" is missing.'
     });
+    return;
   }
 
   items.update(id, target).then(function () {
     res.redirect('/');
-  }, function () {
-    if (!id) {
-      res.status(500);
-      res.render('error', {
-        title: 'Update Failed',
-        description: 'Something failed when updating the item.'
-      });
-    }
+  }, function (e) {
+    res.status(500);
+    res.render('error', {
+      title: 'Update Failed',
+      description: 'Something failed when updating the item.'
+    });
   });
 });
 
