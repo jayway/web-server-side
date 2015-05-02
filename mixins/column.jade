@@ -1,0 +1,14 @@
+include ./move-form
+
+mixin column(name, items)
+  div(class='column ' + name.toLowerCase())
+    h2= name
+    ul.items
+      each item in items
+        li.item
+          span.title= item.title
+          .actions
+            if item.back
+              +move-form('back', item.id, item.back)
+            if item.forward
+              +move-form('forward', item.id, item.forward)

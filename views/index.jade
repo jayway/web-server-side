@@ -1,7 +1,7 @@
 extends layout
 
+include ../mixins/board
+
 block content
   h1= title
-  ul
-    each item in items
-      li= item.title
+  +board(board)
