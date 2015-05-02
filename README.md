@@ -1,7 +1,7 @@
 # Web Server Side Lab - Example
 
 A simple showcase of how you might write an Server-side HTML proxy for the
-Kanban API.
+[Kanban API](https://github.com/gustafnk/kanban-awd-api/tree/jayway-lab).
 
 ## Run
 
