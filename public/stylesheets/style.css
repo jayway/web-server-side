@@ -9,6 +9,7 @@ body {
   padding: 1em;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
+  color: #444;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -51,6 +52,7 @@ a {
 
 .column .item {
   background: #f7f7f7;
+  margin-bottom: 1em;
   padding: 1em;
 }
 
