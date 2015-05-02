@@ -37,14 +37,22 @@ a {
   color: #00B7FF;
 }
 
+.content,
 .board {
-  display: -webkit-flex;
-  display: flex;
   position: fixed;
   top: 5rem;
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.content {
+  padding: 0 1em 1em;
+}
+
+.board {
+  display: -webkit-flex;
+  display: flex;
   overflow: auto;
 }
 
@@ -126,6 +134,7 @@ a {
     font-size: 200%;
     line-height: 3rem;
   }
+  .content,
   .board {
     top: 3rem;
   }
