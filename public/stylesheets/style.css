@@ -19,10 +19,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 1rem;
+  margin: 0;
+  line-height: 5rem;
   font-size: 300%;
   font-weight: 100;
-  margin: 0 1rem;
-  line-height: 5rem;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  z-index: 1;
 }
 
 a {
@@ -30,6 +38,7 @@ a {
 }
 
 .board {
+  display: -webkit-flex;
   display: flex;
   position: fixed;
   top: 5rem;
@@ -40,12 +49,14 @@ a {
 }
 
 .board h2 {
-  font-size: 150%;
+  font-size: 125%;
+  margin: .5em 0;
 }
 
 .column {
+  -webkit-flex: 1 0 25%;
   flex: 1 0 25%;
-  border-right: 1px dashed #ddd;
+  border-right: 1px solid #ddd;
   padding: 0 1em;
 }
 
@@ -90,10 +101,12 @@ a {
 }
 
 .item .actions {
+  display: -webkit-flex;
   display: flex;
 }
 
 .item .actions form {
+  -webkit-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
@@ -106,7 +119,18 @@ a {
 }
 
 @media screen and (max-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 200%;
+    line-height: 3rem;
+  }
+  .board {
+    top: 3rem;
+  }
   .board .column {
+    -webkit-flex: 1 0 200px;
     flex: 1 0 200px;
   }
 }
