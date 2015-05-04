@@ -35,6 +35,9 @@ module.exports = {
     }
     return request(internalItemOrStatusUrl(id), {
       json: true,
+    }).then(function (item) {
+      item.id = id;
+      return item;
     }).then(toExternal);
   },
   getByStatus: function (s) {

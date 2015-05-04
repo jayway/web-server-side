@@ -101,6 +101,9 @@ a {
   font-weight: 400;
   margin: 0 0 .25em;
 }
+.item .title a {
+  text-decoration: none;
+}
 
 .item .description {
   font-weight: 200;
@@ -108,21 +111,21 @@ a {
   margin: 0 0 .5em;
 }
 
-.item .actions {
+.actions {
   display: -webkit-flex;
   display: flex;
 }
 
-.item .actions form {
+.actions form {
   -webkit-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.item .actions form[name="move back"] {
+.actions form[name="move back"] {
   text-align: left;
 }
 
-.item .actions form[name="move forward"] {
+.actions form[name="move forward"] {
   text-align: right;
 }
 
@@ -142,4 +145,26 @@ a {
     -webkit-flex: 1 0 200px;
     flex: 1 0 200px;
   }
+}
+
+h1.backlog {
+  background: #f7f7f7;
+}
+h1.working {
+  background: rgb(228, 228, 255);
+}
+
+h1.verify {
+  background: rgb(255, 248, 228);
+}
+
+h1.done {
+  background: rgb(222, 245, 217);
+}
+h1 .status {
+  display: inline-block;
+  padding: 0 1em;
+  float: right;
+  font-size: 50%;
+  font-weight: 300;
 }

@@ -1,0 +1,17 @@
+extends layout
+
+include ../mixins/move-form
+
+block content
+  .content
+    h1(class=item.status)
+      span=item.title
+      span.status= item.status
+    p= item.description
+    .actions
+      if item.back
+        +move-form('back', item.id, item.back)
+      if item.forward
+        +move-form('forward', item.id, item.forward)
+    p
+      a(href='/') Home

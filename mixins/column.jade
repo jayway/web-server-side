@@ -6,7 +6,8 @@ mixin column(name, items)
     ul.items
       each item in items
         li.item
-          h3.title= item.title
+          h3.title
+            a(href='/items/' + item.id)= item.title
           p.description= item.description
           .actions
             if item.back

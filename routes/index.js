@@ -86,4 +86,31 @@ router.post('/items/:status', function (req, res) {
   });
 });
 
+router.get('/items/:id', function (req, res) {
+  var id = req.params.id;
+
+  if (!id) {
+    res.status(400);
+    res.render('error', {
+      title: 'Bad Request',
+      description: 'The "id" is missing.'
+    });
+    return;
+  }
+
+  items.getById(id).then(function (item) {
+    res.render('details', {
+      item: toItemViewModel(item)
+    });
+  }, function (e) {
+    console.error(e);
+    res.status(500);
+    res.render('error', {
+      title: 'Oops!',
+      description: 'Failed to get item details.',
+    });
+  });
+
+});
+
 module.exports = router;
