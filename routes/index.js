@@ -23,7 +23,7 @@ function toItemViewModel(item) {
     title: item.title,
     description: item.description,
     status: item.status,
-    back: item.status === 'done' ? statusForm(item, -3) : statusForm(item, -1),
+    back: item.status === 'done' ? statusForm(item, -2) : statusForm(item, -1),
     forward: statusForm(item, 1)
   };
 }
