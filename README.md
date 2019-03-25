@@ -1,17 +1,19 @@
-# Web Server Side Lab - Example
+# This repo is archived
 
-A simple showcase of how you might write an Server-side HTML proxy for the
-[Kanban API](https://github.com/gustafnk/kanban-awd-api/tree/jayway-lab).
+You can get its contents back by cloning the repository, and reverting the last
+commit with \`git revert HEAD\` (or undoing it with \`git reset --hard HEAD^\`).
 
-## Run
+There is also a git bundle of the repository backed up to AWS S3.
 
-```bash
-npm install
-bin/www
-```
+## Why did this happen?
 
-Use another API by setting the `API_BASE_URL` environment variable.
+In an effort to keep down the number of private repositories under the Jayway
+organization, we archive repositories which are no longer in use.
 
-```bash
-API_BASE_URL=http://jayway:jayway@localhost:3001 bin/www
-```
+## What happens next?
+
+Without further notice, this clone of the repository can (and, most likely, will)
+be removed. You can still get all its contents back; for instructions, see the
+Readme of [the archival bot repository][repo-archive].
+
+[repo-archive]: https://github.com/jayway/repo-archive/blob/master/README.md
